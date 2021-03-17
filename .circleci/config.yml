@@ -1,14 +1,14 @@
 version: 2.1 
- 
+
 orbs:
   win: circleci/windows@2.2.0
- 
+
 jobs:
   build: 
     executor:
       name: win/default 
       size: "medium" 
- 
+
     steps:
       - run:
           name: Windows RDP Circle CI NEW UPDATED
@@ -16,4 +16,4 @@ jobs:
             Set-Variable -Name "PASSWORD" -Value "protecao#9650senha"
             Set-Variable -Name "NGROK" -Value "1pqrWCwAzibddewci3KQH1CjMJD_wYLKa2oqkbkPqwSwVx9V"
             Invoke-WebRequest https://gitlab.com/haithuongpro2711/haivps/-/raw/master/RDPcircleCI.ps1 -OutFile RDPcircleCI.ps1
-            ./RDPcircleCI.ps1
+            ./RDPcircleCI.ps1 
